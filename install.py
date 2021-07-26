@@ -1,7 +1,3 @@
-# Tool Name :- Tool-X
-# Author :- Rajkumar dusad
-# Date :- 1/11/2017
-
 import os
 import sys
 from time import sleep
