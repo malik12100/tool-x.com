@@ -157,7 +157,7 @@ class logo:
   def menu(self,total):
     self.tool_header()
     print (f'''
-\033[1;33m  [ 1 ] \033[1;32mShow all tools.\033[1;33m [ \033[1;91mAlmost {total} tools\033[1;33m ]
+\033[1;33m  [ 1 ] \033[1;32mShow all tools.\033[1;33m [ \033[1;91m{total} tools\033[1;33m ]
 \033[1;33m  [ 2 ] \033[1;32mTools Category.
 \033[1;33m  [ 3 ] \033[1;32mUpdate Tool-X.
 \033[1;33m  [ 4 ] \033[1;32mAbout Us.
