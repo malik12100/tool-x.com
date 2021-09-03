@@ -4,6 +4,13 @@ from time import sleep
 from .logo import *
 from .system import *
 
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
+blue="\033[1;34m"
+violate="\033[1;37m"
+nc="\033[00m"
+
 class main:
   def install_tools(self):
     while True:
@@ -12,13 +19,13 @@ class main:
       total=len(tool.names)
       os.system("clear")
       logo.install_tools()
-      print("\007")
+      print(f"\007")
       for tool_name in tool.names:
-        print (f" \033[01;32m[ \033[01;37m{num} \033[01;32m] \033[01;33minstall \033[01;32m{tool_name}\033[00m")
+        print (f" {green}[ {violate}{num} {green}] {yellow}Install {green}{tool_name}{nc}")
         num+=1
-      print("")
+      print(f"")
       logo.back()
-      cmd=input("\033[1;36m ##> \033[00m")
+      cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
       if cmd=="00" or cmd=="back":
         self.menu()
         break
@@ -27,13 +34,13 @@ class main:
           if int(cmd)>=1 and int(cmd)<=int(total):
             os.system("clear")
             logo.installing()
-            print("\033[01;32minstalling ....\033[00m")
+            print(f"{green}Installing ....{nc}")
             tool.install(tool.names[int(cmd)-1])
           else:
-            print(f"\007\033[01;31mSorry \033[01;37m: '{cmd}' \033[01;31minvalid input !!\033[00m")
+            print(f"\007{red}Sorry,{violate} '{cmd}' {blue}: {red}invalid input !!{nc}")
             sleep(1)
         except ValueError:
-          print(f"\007\033[01;31mSorry \033[01;37m: '{cmd}' \033[01;31minvalid input !!\033[00m")
+          print(f"\007{red}Sorry,{violate} '{cmd}' {blue}: {red}invalid input !!{nc}")
           sleep(1)
 
   def category(self):
@@ -43,13 +50,13 @@ class main:
       num=1
       os.system("clear")
       logo.tool_header()
-      print("")
+      print(f"")
       for cat in tool.category:
-        print (f"  \033[01;32m[ \033[01;37m{num} \033[01;32m] \033[01;33m{tool.category_data[cat]}\033[00m")
+        print (f"  {green}[ {violate}{num} {green}] {yellow}{tool.category_data[cat]}{nc}")
         num+=1
-      print("")
+      print(f"")
       logo.back()
-      cmd=input("\033[1;36m ##> \033[00m")
+      cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
       if cmd=="00" or cmd=="back":
         self.menu()
         break
@@ -62,16 +69,16 @@ class main:
               cnt=1
               os.system("clear")
               logo.tool_header()
-              print("")
+              print(f"")
               tmp_cat_tool=[]
               for i in tool.names:
                 if tool.category[int(cmd)-1] in tool.data[i]["category"]:
                   tmp_cat_tool.append(tool.data[i]['name'])
-                  print(f" \033[01;32m[ \033[00m{cnt} \033[01;32m] \033[01;33minstall \033[01;32m{tool.data[i]['name']}\033[00m")
+                  print(f" {green}[ {violate}{cnt} {green}] {yellow}Install {green}{tool.data[i]['name']}{nc}")
                   cnt+=1
-              print("")
+              print(f"")
               logo.back()
-              tcmd=input("\033[1;36m ##> \033[00m")
+              tcmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
               if tcmd=="00" or tcmd=="back":
                 break
               else:
@@ -80,26 +87,26 @@ class main:
                   if int(tcmd) in range(1,int(cat_total)+1):
                     os.system("clear")
                     logo.installing()
-                    print("\033[01;32minstalling ....\033[00m")
+                    print(f"{green}Installing ....{nc}")
                     tool.install(tmp_cat_tool[int(tcmd)-1])
                   else:
-                    print(f"\007\033[01;31mSorry \033[01;37m: '{tcmd}' \033[01;31minvalid input !!\033[00m")
+                    print(f"\007{red}Sorry,{violate} '{tcmd}' {blue}: {red}invalid input !!{nc}")
                     sleep(1)
                 except ValueError:
-                  print(f"\007\033[01;31mSorry \033[01;37m: '{tcmd}' \033[01;31minvalid input !!\033[00m")
+                  print(f"\007{red}Sorry,{violate} '{tcmd}' {blue}: {red}invalid input !!{nc}")
                   sleep(1)
           else:
-            print(f"\007\033[01;31mSorry \033[01;37m: '{cmd}' \033[01;31minvalid input !!\033[00m")
+            print(f"\007{red}Sorry,{violate} '{cmd}' {blue}: {red}invalid input !!{nc}")
             sleep(1)
         except ValueError:
-          print(f"\007\033[01;31mSorry \033[01;37m: '{cmd}' \033[01;31minvalid input !!\033[00m")
+          print(f"\007{red}Sorry,{violate} '{cmd}' {blue}: {red}invalid input !!{nc}")
           sleep(1)
 
   def update(self):
     while True:
       os.system("clear")
       logo.update()
-      cmd=input("\033[1;36m ##> \033[00m")
+      cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
       if cmd=="1":
         system=sys()
         if system.connection():
@@ -115,15 +122,15 @@ class main:
               if os.path.exists(system.bin+"/Tool-X") and os.path.exists(system.conf_dir+"/Tool-X"):
                 os.system("clear")
                 logo.updated()
-                cmd=input("\033[1;36m ##> \033[00m")
+                cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
               else:
                 os.system("clear")
                 logo.update_error()
-                cmd=input("\033[1;36m ##> \033[00m")
+                cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
             else:
               os.system("clear")
               logo.update_error()
-              cmd=input("\033[1;36m ##> \033[00m")
+              cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
           else:
             if os.path.exists(system.home+"/Tool-X"):
               pass
@@ -134,24 +141,24 @@ class main:
               if os.path.exists(system.bin+"/Tool-X") and os.path.exists(system.conf_dir+"/Tool-X"):
                 os.system("clear")
                 logo.updated()
-                cmd=input("\033[1;36m ##> \033[00m")
+                cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
               else:
                 os.system("clear")
                 logo.update_error()
-                cmd=input("\033[1;36m ##> \033[00m")
+                cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
             else:
               os.system("clear")
               logo.update_error()
-              cmd=input("\033[1;36m ##> \033[00m")
+              cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
         else:
           os.system("clear")
           logo.nonet()
-          tmp=input("\033[1;36m ##> \033[00m")
+          tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
       elif cmd=="0" or cmd=="back":
         self.menu()
         break
       else:
-        print(f"\007\033[01;31mSorry \033[01;37m: '{cmd}' \033[01;31minvalid input !!\033[00m")
+        print(f"\007{red}Sorry,{violate} '{cmd}' {blue}: {red}invalid input !!{nc}")
         sleep(1)
 
   def about(self):
@@ -160,7 +167,7 @@ class main:
       total=len(tool.names)
       os.system("clear")
       logo.about(total)
-      cmd=input("\033[1;36m ##> \033[00m")
+      cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
       self.menu()
       break
 
@@ -171,7 +178,7 @@ class main:
       total=len(tool.names)
       os.system("clear")
       logo.menu(total)
-      cmd=input("\033[1;36m ##> \033[00m")
+      cmd=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
       if cmd == "1":
         self.install_tools(self)
         break
@@ -202,7 +209,7 @@ class main:
         logo.exit()
         break
       else:
-        print(f"\007\033[01;31mSorry \033[01;37m: '{cmd}' \033[01;31minvalid input !!\033[00m")
+        print(f"\007{red}Sorry,{violate} '{cmd}' {blue}: {red}invalid input !!{nc}")
         sleep(1)
 
 class tools:
@@ -241,7 +248,7 @@ class tools:
         if os.path.exists(system.bin+"/"+package_name):
           os.system("clear")
           logo.already_installed(name)
-          tmp=input("\033[1;36m ##> \033[00m")
+          tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
         else:
           if system.sudo != None:
             os.system(system.sudo+" "+system.pac+" install "+package_name+" -y")
@@ -251,17 +258,17 @@ class tools:
           if os.path.exists(system.bin+"/"+package_name):
             os.system("clear")
             logo.installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
           else:
             os.system("clear")
             logo.not_installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
 
       elif package_manager=="git":
         if os.path.exists(system.home+"/"+package_name):
           os.system("clear")
           logo.already_installed(name)
-          tmp=input("\033[1;36m ##> \033[00m")
+          tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
         else:
           if system.sudo != None:
             os.system(system.sudo+" git clone "+url+" "+system.home+"/"+package_name)
@@ -271,17 +278,17 @@ class tools:
           if os.path.exists(system.home+"/"+package_name):
             os.system("clear")
             logo.installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
           else:
             os.system("clear")
             logo.not_installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
 
       elif package_manager=="wget":
         if os.path.exists(system.home+"/"+package_name):
           os.system("clear")
           logo.already_installed(name)
-          tmp=input("\033[1;36m ##> \033[00m")
+          tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
         else:
           if system.sudo != None:
             os.system(system.sudo+" wget "+url+" -o "+system.home+"/"+package_name)
@@ -291,17 +298,17 @@ class tools:
           if os.path.exists(system.home+"/"+package_name):
             os.system("clear")
             logo.installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
           else:
             os.system("clear")
             logo.not_installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
 
       elif package_manager=="curl":
         if os.path.exists(system.home+"/"+package_name):
           os.system("clear")
           logo.already_installed(name)
-          tmp=input("\033[1;36m ##> \033[00m")
+          tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
         else:
           if system.sudo != None:
             os.system(system.sudo+" curl "+url+" -o "+system.home+"/"+package_name)
@@ -311,12 +318,12 @@ class tools:
           if os.path.exists(system.home+"/"+package_name):
             os.system("clear")
             logo.installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
           else:
             os.system("clear")
             logo.not_installed(name)
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
     else:
       os.system("clear")
       logo.nonet()
-      tmp=input("\033[1;36m ##> \033[00m")
+      tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")

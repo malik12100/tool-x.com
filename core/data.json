@@ -1991,6 +1991,14 @@
     "package_manager" : "git",
     "dependency" : ["git"]
   },
+  "maskphish" : { 
+    "name" : "maskphish",
+    "package_name" : "maskphish",
+    "category" : ["sniffing_spoofing"],
+    "url" : "https://github.com/jaykali/maskphish.git",
+    "package_manager" : "git",
+    "dependency" : ["curl","git"]
+  },
   "maskprocessor" : { 
     "name" : "maskprocessor",
     "package_name" : "maskprocessor",
@@ -2294,6 +2302,14 @@
     "url" : "https://github.com/Renato-Silva/pyPISHER.git",
     "package_manager" : "git",
     "dependency" : ["python","git"]
+  },
+  "PyPhisher" : { 
+    "name" : "PyPhisher",
+    "package_name" : "PyPhisher",
+    "category" : ["sniffing_spoofing", "information_gathering"],
+    "url" : "https://github.com/KasRoudra/PyPhisher.git",
+    "package_manager" : "git",
+    "dependency" : ["python","git","php","curl","wget","unzip"]
   },
   "pybluez" : { 
     "name" : "pybluez",

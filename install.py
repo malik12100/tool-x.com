@@ -4,6 +4,10 @@ from time import sleep
 from modules.logo import *
 from modules.system import *
 
+yellow="\033[1;33m"
+blue="\033[1;34m"
+nc="\033[00m"
+
 class tool:
   @classmethod
   def install(self):
@@ -11,7 +15,7 @@ class tool:
       system=sys()
       os.system("clear")
       logo.ins_tnc()
-      inp=input("\033[1;33m Do you want to install Tool-X [Y/n]> \033[00m")
+      inp=input(f"{yellow}Do you want to install Tool-X [Y/n]> {nc}")
       if inp=="y" or inp=="Y":
         os.system("clear")
         logo.installing()
@@ -30,12 +34,12 @@ class tool:
           if os.path.exists(system.bin+"/Tool-X") and os.path.exists(system.conf_dir+"/Tool-X"):
             os.system("clear")
             logo.ins_sc()
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
             break
           else:
             os.system("clear")
             logo.not_ins()
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
             break
         else:
           if os.path.exists(system.conf_dir+"/Tool-X"):
@@ -51,12 +55,12 @@ class tool:
           if os.path.exists(system.bin+"/Tool-X") and os.path.exists(system.conf_dir+"/Tool-X"):
             os.system("clear")
             logo.ins_sc()
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
             break
           else:
             os.system("clear")
             logo.not_ins()
-            tmp=input("\033[1;36m ##> \033[00m")
+            tmp=input(f"{blue}Tool-X{nc}@{blue}space {yellow}$ {nc}")
             break
       else:
         break

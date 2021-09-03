@@ -1,89 +1,98 @@
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
+blue="\033[1;34m"
+purple="\033[1;35m"
+cyan="\033[1;36m"
+violate="\033[1;37m"
+nc="\033[00m"
+
 class logo:
   @classmethod
   def tool_header(self):
-    print('''\007
+    print(f'''\007
 
-\033[1;33m
+{yellow}
          _____           _    __  __
         |_   _|__   ___ | |   \ \/ /
           | |/ _ \ / _ \| |____\  /
           | | (_) | (_) | |____/  \    
-          |_|\___/ \___/|_|   /_/\_\ \033[1;91mv2.1
+          |_|\___/ \___/|_|   /_/\_\ {purple}v2.1
 
 
-\033[1;36m =============================================\033[1;m
-\033[1;33m|          Install Best Hacking Tool          |
-\033[1;36m =============================================\033[00m''')
+{cyan} =============================================
+{yellow}|          Install Best Hacking Tool          |
+{cyan} ============================================={nc}''')
 
   @classmethod
   def tool_footer(self):
-    print('''\033[1;36m_______________________________________________
-===============================================\033[00m''')
+    print(f'''{cyan}_______________________________________________
+==============================================={nc}''')
 
 
   @classmethod
   def not_ins(self):
     self.tool_header()
-    print ('''
-\033[1;31m  [ + ]  \033[1;31mWe can't install Tool-X.\033[1;m
-\033[1;31m  [ + ]  \033[1;31mThere are some error.\033[1;m
-\033[1;31m  [ + ]  \033[1;31mPlease try again after some time.\033[1;m''')
+    print (f'''
+{cyan}  [ + ]  {red}We can't install Tool-X.
+{cyan}  [ + ]  {red}There are some error.
+{cyan}  [ + ]  {red}Please try again after some time!''')
     self.tool_footer()
 
   @classmethod
   def ins_tnc(self):
     self.tool_header()
-    print ('''
-\033[1;33m  [ + ] \033[1;32mUse It At Your Own Risk.
-\033[1;33m  [ + ] \033[1;32mNo Warranty.
-\033[1;33m  [ + ] \033[1;32mUse it legal purpose only.
-\033[1;33m  [ + ] \033[1;32mWe are not responsible for your actions.
-\033[1;33m  [ + ] \033[1;32mDo not do things that are forbidden.
+    print (f'''
+{yellow}  [ + ] {green}Use It At Your Own Risk.
+{yellow}  [ + ] {green}No Warranty.
+{yellow}  [ + ] {green}Use it legal purpose only.
+{yellow}  [ + ] {green}We are not responsible for your actions.
+{yellow}  [ + ] {green}Do not do things that are forbidden.
 
-\033[1;31m If you are installing this tool.
+{red} If you are installing this tool.
  that means you are agree with all terms.''')
     self.tool_footer()
 
   @classmethod
   def ins_sc(self):
     self.tool_header()
-    print ('''
-\033[1;33m    [ + ] \033[1;32mTool-X installed successfully.
-\033[1;33m    [ + ] \033[1;32mTo run Tool-X.
-\033[1;33m    [ + ] \033[1;32mType Tool-X in your terminal.''')
+    print (f'''
+{yellow}    [ + ] {green}Tool-X installed successfully.
+{yellow}    [ + ] {green}To run Tool-X,
+{yellow}    [ + ] {green}Type Tool-X in your terminal.''')
     self.tool_footer()
 
   @classmethod
   def update(self):
     self.tool_header()
-    print ('''
-\033[1;33m  [ 1 ] \033[1;32mUpdate your Tool-X.
-\033[1;33m  [ 0 ] \033[1;32mFor Back.\033[00m''')
+    print (f'''
+{yellow}  [ 1 ] {green}Update your Tool-X.
+{yellow}  [ 0 ] {green}For Back.{nc}''')
     self.tool_footer()
 
   @classmethod
   def updated(self):
     self.tool_header()
-    print ('''
-\033[1;33m      [ + ] \033[1;32mTool-X Updated Successfully.
-\033[1;33m      [ + ] \033[1;32mPress Enter to continue.\033[00m''')
+    print (f'''
+{yellow}      [ + ] {green}Tool-X Updated Successfully.
+{yellow}      [ + ] {green}Press Enter to continue.{nc}''')
     self.tool_footer()
 
   @classmethod
   def nonet(self):
     self.tool_header()
-    print ('''
-\033[1;31m  [ + ]  \033[1;31mNo network connection?\033[1;m
-\033[1;31m  [ + ]  \033[1;31mAre you offline?\033[1;m
-\033[1;31m  [ + ]  \033[1;31mPlease try again after some time.\033[00m''')
+    print (f'''
+{cyan}  [ + ]  {red}No network connection?
+{cyan}  [ + ]  {red}Are you offline?
+{cyan}  [ + ]  {red}Please try again after some time.{nc}''')
     self.tool_footer()
 
   @classmethod
   def update_error(self):
     self.tool_header()
-    print ('''
-\033[1;31m  [ + ]  \033[1;31mWe can't Update Tool-X.\033[1;m
-\033[1;31m  [ + ]  \033[1;31mPlease try again after some time.\033[00m''')
+    print (f'''
+{red}  [ + ]  {red}We can't Update Tool-X.\033[1;m
+{red}  [ + ]  {red}Please try again after some time.{nc}''')
     self.tool_footer()
 
 
@@ -91,29 +100,29 @@ class logo:
   def about(self,total):
     self.tool_header()
     print (f'''
-\033[1;33m       [+] Tool Name :- \033[1;32mTool-X
-\033[1;33m       [+] Author :- \033[1;32mRajkumar Dusad
-\033[1;33m       [+] Latest Update :- \033[1;32m23/3/2019.\033[1;m
-\033[1;33m       [+] Tools :- \033[1;32mtotal {total} tools.\033[1;m
+{yellow}       [+] Tool Name :- {green}Tool-X
+{yellow}       [+] Author :- {green}Rajkumar Dusad
+{yellow}       [+] Latest Update :- {green}23/3/2019.\033[1;m
+{yellow}       [+] Tools :- {green}total {total} tools.\033[1;m
 
-\033[1;33m [+] \033[1;32mTool-x is automatic tool installer.
-\033[1;33m [+] \033[1;32mMade for termux and linux based system.
-\033[1;31m [+] Note :- Use this tool at your own risk.''')
+{yellow} [+] {green}Tool-x is automatic tool installer.
+{yellow} [+] {green}Made for termux and linux based system.
+{red} [+] Note :- Use this tool at your own risk.''')
     self.tool_footer()
 
 
   @classmethod
   def install_tools(self):
-    print ("""\033[01;33m =============================================
-\033[01;32m|_____________ Select your tool ______________|
- \033[01;33m=============================================\033[00m""")
+    print (f"""{yellow} =============================================
+{green}|_____________ Select your tool ______________|
+ {yellow}============================================={nc}""")
 
   @classmethod
   def already_installed(self,name):
     self.tool_header()
     print(f'''
-\033[1;33m  [ + ] \033[1;32mSorry ??
-\033[1;33m  [ + ] \033[1;37m'{name}'\033[01;32m is already Installed !!
+{yellow}  [ + ] {green}Sorry ??
+{yellow}  [ + ] {violate}'{name}'{green} is already Installed !!
 ''')
     self.tool_footer()
 
@@ -121,8 +130,8 @@ class logo:
   def installed(self,name):
     self.tool_header()
     print(f'''
-\033[1;33m  [ + ] \033[1;32mInstalled Successfully !!
-\033[1;33m  [ + ] \033[1;37m'{name}'\033[01;32m is Installed Successfully !!
+{yellow}  [ + ] {green}Installed Successfully !!
+{yellow}  [ + ] {violate}'{name}'{green} is Installed Successfully !!
 ''')
     self.tool_footer()
 
@@ -130,44 +139,44 @@ class logo:
   def not_installed(self,name):
     self.tool_header()
     print(f'''
-\033[1;33m  [ + ] \033[1;31mSorry ??
-\033[1;33m  [ + ] \033[1;37m'{name}'\033[01;31m is not Installed !!
+{yellow}  [ + ] {red}Sorry ??
+{yellow}  [ + ] {violate}'{name}'{red} is not installed !!
 ''')
     self.tool_footer()
 
   @classmethod
   def back(self):
-    print ("""\033[01;36m =============================================
-\033[01;33m|  00) Back                                   |
- \033[01;36m=============================================\033[00m""")
+    print (f"""\033[01;36m =============================================
+{yellow}|  00) Back                                   |
+ \033[01;36m============================================={nc}""")
 
   @classmethod
   def updating(self):
-    print ("""\033[01;33m =============================================
-\033[01;32m|______________ Updating Tool-X ______________|
- \033[01;33m=============================================\033[00m""")
+    print (f"""{yellow} =============================================
+{green}|______________ Updating Tool-X ______________|
+ {yellow}============================================={nc}""")
 
   @classmethod
   def installing(self):
-    print ("""\033[01;33m =============================================
-\033[01;32m|________________ Installing _________________|
- \033[01;33m=============================================\033[00m""")
+    print (f"""{yellow} =============================================
+{green}|________________ Installing _________________|
+ {yellow}============================================={nc}""")
 
   @classmethod
   def menu(self,total):
     self.tool_header()
     print (f'''
-\033[1;33m  [ 1 ] \033[1;32mShow all tools.\033[1;33m [ \033[1;91m{total} tools\033[1;33m ]
-\033[1;33m  [ 2 ] \033[1;32mTools Category.
-\033[1;33m  [ 3 ] \033[1;32mUpdate Tool-X.
-\033[1;33m  [ 4 ] \033[1;32mAbout Us.
-\033[1;33m  [ x ] \033[1;32mFor Exit.''')
+{yellow}  [ 1 ] {green}Show all tools.{yellow} [ {purple}{total} tools{yellow} ]
+{yellow}  [ 2 ] {green}Tools Category.
+{yellow}  [ 3 ] {green}Update Tool-X.
+{yellow}  [ 4 ] {green}About Us.
+{yellow}  [ x ] {green}For Exit.''')
     self.tool_footer()
 
   @classmethod
   def exit(self):
     self.tool_header()
-    print ('''
-\033[1;33m         [ + ] \033[1;32mThanks for using Tool-X
-\033[1;33m         [ + ] \033[1;32mGood By..... :)\033[00m''')
+    print (f'''
+{yellow}         [ + ] {green}Thanks for using Tool-X
+{yellow}         [ + ] {green}Good Bye.....! ){nc}''')
     self.tool_footer()
