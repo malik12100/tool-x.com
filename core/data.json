@@ -487,6 +487,14 @@
     "package_manager" : "git",
     "dependency" : ["php","git"]
   },
+  "IP-Tracker" : { 
+    "name" : "IP-Tracker",
+    "package_name" : "IP-Tracker",
+    "category" : ["information_gathering","ip_tracking"],
+    "url" : "https://github.com/KasRoudra/IP-Tracker",
+    "package_manager" : "git",
+    "dependency" : ["php","git","curl","wget","unzip"]
+  },
   "IPGeoLocation" : { 
     "name" : "IPGeoLocation",
     "package_name" : "IPGeoLocation",
