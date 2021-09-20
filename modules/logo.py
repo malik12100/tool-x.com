@@ -101,7 +101,6 @@ class logo:
     self.tool_header()
     print (f'''
 {yellow}       [+] Tool Name :- {green}Tool-X
-{yellow}       [+] Author :- {green}Rajkumar Dusad
 {yellow}       [+] Latest Update :- {green}23/3/2019.\033[1;m
 {yellow}       [+] Tools :- {green}total {total} tools.\033[1;m
 
