@@ -6,6 +6,13 @@
 
 ------------------------------------------------------------------------
 
+## Legal Notice: please don't use this tool
+
+#### Issue: https://github.com/rajkumardusad/onex/issues/86#issue-1053271339
+
+*According to that person onex tool is harmful and it can break your computer and toolx is simillar to onex, so i request everyone please do not install and use this tool.*
+
+
 ### Introduction
 
 *Tool-X is a Kali Linux hacking tools installer for Termux and linux system.*
