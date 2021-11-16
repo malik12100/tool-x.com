@@ -8,9 +8,9 @@
 
 ## Legal Notice: please don't use this tool
 
-#### Issue: https://github.com/rajkumardusad/onex/issues/86#issue-1053271339
+#### Issue: https://github.com/rajkumardusad/Tool-X/issues/286#issue-1053246036
 
-*According to that person onex tool is harmful and it can break your computer and toolx is simillar to onex, so i request everyone please do not install and use this tool.*
+*According to that person this tool is harmful and it can break your computer, so i request everyone please do not install and use this tool.*
 
 
 ### Introduction
