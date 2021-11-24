@@ -6,12 +6,6 @@
 
 ------------------------------------------------------------------------
 
-## Legal Notice: please don't use this tool
-
-#### Issue: https://github.com/rajkumardusad/Tool-X/issues/286#issue-1053246036
-
-*According to that person this tool is harmful and it can break your computer, so i request everyone please do not install and use this tool.*
-
 
 ### Introduction
 
